@@ -31,8 +31,8 @@ int callColor([String newColor = "White"]) {
   for (var item in color) {
     print(item);
   }
-  return color.length;
+  return color.length; // ส่งค่าจำนวนข้อมูลใน array กลับไป
 }
 
-void callWeb(String web ,{int port = 80, String protocal = "http"}) => 
+void callWeb(String web,{int port = 80, String protocal = "http"}) => 
     print("$protocal: $web : $port");
