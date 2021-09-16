@@ -41,7 +41,7 @@ class Index extends StatelessWidget {
                     shape: StadiumBorder(),
                   ),
                   child: Text(
-                    "  LOGIN  " ,
+                    "  LOGIN  ",
                     style: TextStyle(fontSize: 28),
                   ),
                   onPressed: () {
