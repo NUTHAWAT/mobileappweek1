@@ -7,7 +7,7 @@ class Register extends StatefulWidget {
 }
 
 class _RegisterState extends State<Register> {
-  var name, surname, email, password;
+  var name, surname, email, password, confirmpass;
   final formKey = GlobalKey<FormState>();
 
   @override
