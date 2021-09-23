@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mobileappweek1/backend/database.dart';
 import 'package:mobileappweek1/config/constant.dart';
 
 class Register extends StatefulWidget {
@@ -174,17 +175,22 @@ class _RegisterState extends State<Register> {
   }
 
   Widget btnSubmit() => ElevatedButton(
-      style: ElevatedButton.styleFrom(
-        primary: Colors.amber[900],
-        padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
-        shape: StadiumBorder(),
-      ),
-      onPressed: () {
-        if (formKey.currentState!.validate()) {
-          formKey.currentState!.save();
-          print(
-              "Name: $name Surname: $surname Email: $email Password: $password");
-        }
-      },
-      child: Text('Submit'));
+        style: ElevatedButton.styleFrom(
+          primary: Colors.amber[900],
+          padding: EdgeInsets.fromLTRB(30, 15, 30, 15),
+          shape: StadiumBorder(),
+        ),
+        onPressed: () {
+          //print("HELLO");
+          var local = new DBLocal();
+
+          if (formKey.currentState!.validate()) {
+            formKey.currentState!.save();
+            local.register(name, surname, email, password);
+            formKey.currentState!.reset();
+            Navigator.pushNamed(context, 'Login');
+          }
+        },
+        child: Text('Submit'),
+      );
 }

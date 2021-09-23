@@ -28,21 +28,28 @@ class Index extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 32,
                   color: Colors.amber[900],
+                  fontWeight: FontWeight.w300,
                 ),
               ),
               Image.asset(
                 "asset/image/pic1.png",
                 width: size.width * 0.8,
               ),
+              SizedBox(
+                height: 30,
+              ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Colors.amber[900],
-                    padding: EdgeInsets.fromLTRB(120, 15, 120, 15),
+                    padding: EdgeInsets.fromLTRB(80, 10, 80, 10),
                     shape: StadiumBorder(),
                   ),
                   child: Text(
                     "  LOGIN  ",
-                    style: TextStyle(fontSize: 28),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                   onPressed: () {
                     Navigator.pushNamed(context, 'Login');
@@ -53,12 +60,15 @@ class Index extends StatelessWidget {
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     primary: Colors.amber[900],
-                    padding: EdgeInsets.fromLTRB(120, 15, 120, 15),
+                    padding: EdgeInsets.fromLTRB(80, 10, 80, 10),
                     shape: StadiumBorder(),
                   ),
                   child: Text(
                     "SIGN UP",
-                    style: TextStyle(fontSize: 28),
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w400,
+                    ),
                   ),
                   onPressed: () {
                     Navigator.pushNamed(context, 'Register');
